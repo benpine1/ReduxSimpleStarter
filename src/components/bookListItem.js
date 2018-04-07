@@ -1,8 +1,10 @@
 import React from 'react';
 
-const BookListItem = ({book}) => {
+const BookListItem = ({book, onBookSelected}) => {
     return (
-        <li key={book.title} className="list-group-item">
+        <li
+            onClick={() => onBookSelected(book)}
+            className="list-group-item">
             {book.title}
         </li>
     )
